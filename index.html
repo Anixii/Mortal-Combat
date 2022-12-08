@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <link rel="stylesheet" href="style/main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="wrapper"> 
+        <img class="img-wrapper" src="#" alt="">
+        <div class="player"> 
+            <div id="scorpionHP" class="player__hp scorpionHP"> 
+                <div class="indicator__scorpion"></div>
+            </div> 
+            <div class="player__ability"> 
+                <ul> 
+                    <!-- <li><button id="attack" class="ability__btn scorpion__btn"  onclick="attackScorpion()"  >Атака</button>  </li>
+                    <li><button id="nothing" class="ability__btn scorpion__btn"  >Ульта</button></li>
+                    <li><button id="defense" class="ability__btn scorpion__btn" onclick="defendScorpion()" >Защита</button></li>
+                    <li><button id='fireball' class="ability__btn scorpion__btn" onclick="getFireBallScorpion()" >  Файрболл </button> </li> --> 
+                    <li><button id="attack" class="ability__btn scorpion__btn" onclick="whatsAttack()"  >Атака</button>  </li>
+                    <li><button id="nothing" class="ability__btn scorpion__btn"  >Ничего не делать</button></li>
+                    <li><button id="defense" class="ability__btn scorpion__btn" onclick="whatsDef()"  >Защита</button></li>
+                    <li><button id='fireball' class="ability__btn scorpion__btn" onclick="whatsSkill()" >Супер умение</button> </li>
+                </ul>
+            </div>
+            <div class="player__hero">  
+                <img class="fireball" src="#" alt="">
+                <img class="tekken" src="img/escorpion.gif" alt="Tekken">
+            </div>
+        </div>
+        <div class="player"> 
+            <div id="subzeroHP" class="player__hp subzeroHP"> 
+                <div class="indicator__subzero"></div>
+            </div> 
+            <div class="player__ability ability-subzero"> 
+                <ul> 
+                    <li> <button class="ability__btn subzero__btn" >Атака</button>  </li>
+                    <li><button class="ability__btn subzero__btn" >Ульта</button></li>
+                    <li><button class="ability__btn subzero__btn" >Защита</button></li>
+                </ul>
+            </div>
+            <div class="player__hero "> 
+                <img class="subzero" src="img/Shaokahn_mk2.webp" alt="Tekken">
+            </div>
+        </div> 
+    </div>   
+
+    <div class="start">  
+        <div class="start_title">Выберите Героя</div>
+        <div class="start__name"> 
+            <input type="text" id="start__name" placeholder="Имя">
+        </div> 
+        <div class="start__row"> 
+            <div class="start__hero">  
+                
+                <button id="scorpion__choose-icon"  class="scorpion__choose-btn"><img  class="img__choose" src="img/scorp-choose.webp" alt=""></button>   
+                <p class='start__title'>Выбрать Скорпиона </p>
+            </div> 
+            <div class="start__hero"> 
+                <button class="subzero__choose-btn"><img class="img__choose" src="img/subzero__choose-icon.webp" alt=""></button>   
+                <p class='start__title'>Выбрать Сабзиро </p>
+            </div>  
+            
+            <!-- <div class="start__hero"> 
+                <button class="chaokhan__choose-btn"></button>  
+                <p class='start__title'>Выбрать Шаокана </p>
+            </div> -->
+            
+        </div>  
+        <div class="center">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+        <!-- <div class="start-start"> 
+            <button class="start__btn"> Начать игру</button>
+        </div> -->
+    </div> 
+
+    <div class="enemy">  
+        <div class="start_title">Выберите Противника</div>
+        <div class="start__name"> 
+            <input type="text" id="start__name" placeholder="Имя">
+        </div> 
+        <div class="start__row enemy__row" > 
+            <div class="start__hero">  
+                
+                <button  class="shaokhan__choose-btn"><img  class="img__enemy" src="img/Shao_tower.webp" alt=""></button>   
+                <p class='start__title'>Выбрать Шаокана</p>
+            </div> 
+            <div class="start__hero"> 
+                <button class="sonya__choose-btn"><img class="img__enemy" src="img/Sonya_tower.webp" alt=""></button>   
+                <p class='start__title'>Выбрать Соню Блейд </p>
+            </div>  
+            
+            <!-- <div class="start__hero"> 
+                <button class="chaokhan__choose-btn"></button>  
+                <p class='start__title'>Выбрать Шаокана </p>
+            </div> -->
+            
+        </div>  
+        <div class="center">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+        <!-- <div class="start-start"> 
+            <button class="start__btn"> Начать игру</button>
+        </div> -->
+    </div> 
+
+    <audio autoplay> 
+        <source id="music" src="img/OST_-_Mortal_Kombat_Original_62828923.mp3">
+    </audio> 
+
+
+
+    <!-- <div class="block"> 
+        <img src="img/ryu-street-fighter.gif" class="allo" alt="">
+    </div> -->
+    <!-- <bgsound src="img/OST_-_Mortal_Kombat_Original_62828923.mp3" loop="1"></bgsound> -->
+    <!-- <embed autoplay  height="80px"  class="music" src="img/OST_-_Mortal_Kombat_Original_62828923.mp3"></embed> -->
+    <script src="script.js"></script>
+</body>
+</html>
